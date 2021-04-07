@@ -1,0 +1,24 @@
+R 1000 800    
+NO ./textures/sky_1.xpm         
+
+SO        ./textures/eagle.xpm
+
+WE ./textures/bluestone.png
+
+
+
+EA ./textures/sky_1.xpm
+
+
+S       ./textures/pillar.xpm
+F     74,34,34
+C      10,55,140
+
+
+
+
+
+
+
+
+
