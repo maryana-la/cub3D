@@ -6,7 +6,7 @@
 /*   By: rchelsea <rchelsea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 14:55:23 by rchelsea          #+#    #+#             */
-/*   Updated: 2021/04/07 14:55:24 by rchelsea         ###   ########.fr       */
+/*   Updated: 2021/04/09 20:47:49 by rchelsea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,10 +73,13 @@ void			apply_texture(t_all *all, t_texture txt, int x)
 		all->eng.line_h / 2) * txt.step;
 	while (i < all->eng.draw_end)
 	{
-		txt.txt_y = (int)txt.pos & (txt.hight - 1);
-		txt.pos += txt.step;
+		txt.txt_y = (int)txt.pos;
+   		txt.pos += txt.step;
 		color = my_mlx_pixel_take(&txt, txt.txt_x, txt.txt_y);
-		my_mlx_pixel_put(all, x, i, color);
+		if (color > 0)
+			my_mlx_pixel_put(all, x, i, color);
+		else
+			my_mlx_pixel_put(all, x, i, 0);
 		i++;
 	}
 }
