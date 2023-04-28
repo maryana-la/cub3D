@@ -29,7 +29,7 @@ OBJ := ${SRC:.c=.o}
 
 HEADERS = mlx/mlx.h get_next_line/get_next_line.h srcs/cub3d.h
 
-LIBS = mlx/libmlx.a -lz -lmlx -framework OpenGl -framework AppKit 
+LIBS = mlx/libmlx.a -lz -framework OpenGl -framework AppKit 
 
 MLX	= mlx/libmlx.a
 
